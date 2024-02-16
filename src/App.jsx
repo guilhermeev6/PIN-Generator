@@ -3,11 +3,19 @@ import './App.css'
 
 function App() {
   const [size, setSize] = useState("")
+  let [characters] = useState([''])
+  const [upperCase] = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+  const [lowerCase] = ['abcdefghijklmnopqrstuvwxyz']
+  const [numbers] = ['1234567890']
+  const [special] = ['!@#$%¨&*()-_=+/?|{}[]']
 
   const range = (e) => {
     setSize(e.target.value)
   }
 
+  const generate = () => {
+    
+  }
   return (
     <>
       <div className="container">
@@ -39,7 +47,7 @@ function App() {
               <span>Include Special Characters?(@-*)</span>
             </label>
 
-            <button>Generate</button>
+            <button onClick={generate}>Generate</button>
       </div>
     </>
   )
